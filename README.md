@@ -3,33 +3,31 @@ Find SaaS ideas worth building
 
 ---
 
-🔑 Step 1 — Get your free Groq API key
+## Setup
 
-Go to https://console.groq.com and create a free account.
-Click "API Keys" then "Create API Key" and copy it. It looks like: gsk_...
+**1. Install dependencies**
 
-💻 Step 2 — Install everything
+Open your terminal, navigate to this folder, and run:
 
-Open your terminal in this folder and run:
+Mac / Linux:
 
-    python -m venv venv 
-    source venv/bin/activate
-    pip install -r requirements.txt
+    python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
 
-(On Windows use: venv\Scripts\activate instead)
+Windows:
 
-🔐 Step 3 — Add your API key
+    python -m venv venv && .\venv\Scripts\activate && pip install -r requirements.txt
 
-Find the file called .env.example in this folder.
-Rename it to .env (just remove the .example part).
-Open it and replace your_groq_key_here with the key you copied.
-
-🚀 Step 4 — Start the app
+**2. Start the app**
 
     uvicorn main:app --reload
 
-Then open your browser and go to http://localhost:8000
+Then open http://localhost:8000 in your browser.
 
-To stop the app press Ctrl + C in your terminal.
+**3. Enter your API key**
 
-Built with Deplo · Powered by Groq (https://console.groq.com)
+The app will ask for your Groq API key on first run.
+Get a free key at https://console.groq.com
+
+---
+
+Built with Deplo · Powered by Groq
